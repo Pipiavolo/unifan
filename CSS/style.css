@@ -1,0 +1,46 @@
+header h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+        display: flex;
+        width: 100%;
+        height: 100%;
+}
+
+body{
+        display: flex;
+        width: 100%;
+        height: 100%;
+}
+
+@media (min-width: 768px) {
+
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        height: 30%;
+        width: 100%;
+        background-color: brown;
+    }
+
+    header h1{
+        text-align: center;
+        width: 70%;
+        font-size: 3em;
+    }
+
+    header img{
+        justify-content: start;
+        width: auto;
+        height: 10em;
+        margin: 2%;    
+    }
+
+    .carrito{
+        width: 5%;
+        height: 5%;
+        margin: 2%;
+    }
+}
