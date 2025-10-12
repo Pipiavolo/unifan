@@ -1,4 +1,4 @@
-html, body {
+html, body{
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -8,133 +8,263 @@ html, body {
     height: 100%;
 }
 
-header {
+header{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: purple;
+    background-color: #55917F;
     color: white;
-    padding: 1rem 2%;
-    box-sizing: border-box;
 }
 
-.logo {
+.logo{
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.logo h1 {
+.logo h1{
     margin: 0;
-    font-size: 1.2rem;
 }
 
-.logo span {
+.logo span{
     font-weight: normal;
     color: lightgray;
     font-size: 1rem;
 }
 
-.logo img {
+.logo img{
     height: 2.5rem;
 }
 
-.search-bar {
+.busqueda{
     display: flex;
-    align-items: center;
-    background-color: white;
     border-radius: 0.3rem;
-    overflow: hidden;
-    width: 50%;
 }
 
-.search-bar input {
-    border: none;
-    outline: none;
-    padding: 0.5rem;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
+.busqueda button{
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: black;
+  transition: all 0.5s ease;
 }
 
-.search-bar button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.busqueda button:hover{
+  letter-spacing: 0.3em;
+  background-color: hsl(0, 89%, 71%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
-.search-bar button img {
-    width: 1.2rem;
-    height: 1.2rem;
-}
 
-.icons {
+.icon{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.icons img {
+.icon img{
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
 }
 
-.cart {
+.cart{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cart .count {
+.cart .count{
+    display: flex;
     background-color: cyan;
     color: black;
     border-radius: 50%;
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-@media (min-width: 768px) {
-    header {
+.banner{    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #21295C;
+}
+
+.destacados{
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #21295c;
+}
+
+.destacados-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #55917f;
+}
+
+.destacados-panel{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.producte{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 20em;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #F77272;
+}
+
+.producte:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.producte img{
+  width: 80%;
+  margin: 1em 0;
+  height: 40%;
+  object-fit: contain;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.info h3{
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.info p{
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+}
+
+.destacados-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.precio{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.destacados-footer button{
+  color: black;
+  background-color: #EFA9AE;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.destacados-footer button:hover{
+  background-color: #EAFDF8;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21295c; 
+  color: #EFA9AE; 
+  border-top: 2px solid #55917f;
+}
+
+@media (min-width: 768px){
+    header{
         padding: 1rem 3%;
     }
 
-    .logo h1 {
+    .logo h1{
         font-size: 1.5rem;
     }
 
-    .logo img {
+    .logo img{
         height: 3rem;
     }
 
-    .search-bar {
-        width: 40%;
+    .busqueda{
+        width: auto;
+        gap: 0.5em;
     }
 
-    .search-bar input {
-        padding: 0.6rem;
-        font-size: 1.05rem;
+    .busqueda button{
+        border-radius: 5rem;
+        letter-spacing: 0.05rem;
     }
 
-    .search-bar button {
-        padding: 0.6rem;
-    }
-
-    .search-bar button img {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .icons img {
+    .icon img{
         width: 1.8rem;
         height: 1.8rem;
+    }
+    
+    .banner{
+        width: 90%;
+        margin: 2em auto;
+        border-radius: 5em;
+    }
+
+    .banner img{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        border-radius: 5em;
+        padding: 4em;
+    }
+
+    .destacados{
+        border-radius: 5em;
+        width: 90%;
+        margin-bottom: 2em;
+    }
+
+    .destacados-header{
+        margin: 1em 0;
+        margin-bottom: 2em;
+        border-radius: 5em;  
+        padding: 0 2em;
+    }
+
+    .destacados-header h2{
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+
+    .destacados-header p{
+        font-size: 1.5em;
+    }
+
+    .destacados-panel{
+        margin: 1em 0;
+        gap: 5em;
+    }
+
+    .destacados-footer button{
+        border-radius: 4em;
+    }
+
+    footer{
+    height: 2em;
+    width: 100%;
+    font-size: 0.9em;
+    }
+
+    footer p{
+        margin: 0;
     }
 }
