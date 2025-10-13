@@ -1,3 +1,6 @@
+/*Parametres globals*/
+
+/*Parametres de body y html*/
 html, body{
     margin: 0;
     padding: 0;
@@ -9,6 +12,7 @@ html, body{
     overflow-x: hidden;
 }
 
+/*Header*/
 header{
     display: flex;
     justify-content: space-between;
@@ -86,6 +90,7 @@ header{
     font-weight: bold;
 }
 
+/*Banner*/
 .banner{    
     display: flex;
     align-content: center;
@@ -93,6 +98,7 @@ header{
     background-color: #21295C;
 }
 
+/*Productes destacats*/
 .destacados{
   display: flex;
   margin: auto;
@@ -177,6 +183,7 @@ header{
   background-color: #EAFDF8;
 }
 
+/*Footer*/
 .footer {
     display: flex;
     width: 100%;
@@ -223,8 +230,10 @@ footer a:hover {
     height: auto;
 }
 
-
+/*Parametres per pantalles grans*/
 @media (min-width: 768px){
+
+  /*Header*/
     header{
         padding: 1rem 3%;
         width: 100%;
@@ -257,6 +266,7 @@ footer a:hover {
         height: 1.8rem;
     }
     
+  /*Banner*/
     .banner{
         width: 90%;
         margin: 2em auto;
@@ -271,6 +281,7 @@ footer a:hover {
         padding: 4em;
     }
 
+  /*Productes destacats*/
     .destacados{
         border-radius: 5em;
         width: 90%;
@@ -302,6 +313,7 @@ footer a:hover {
         border-radius: 4em;
     }
 
+  /*Footer*/
     footer{
     height: 2em;
     width: 100%;
@@ -313,8 +325,10 @@ footer a:hover {
     }
 }
 
+  /*Paràmetres per pantalles petites*/
   @media (max-width: 767px){
 
+    /*Header*/
     header{
         padding: 1rem 3%;
         width: 100%;
@@ -375,6 +389,7 @@ footer a:hover {
         letter-spacing: 0.1em;
     }
 
+    /*Banner*/
     .banner{
         width: 90%;
         margin: 2em auto;
@@ -390,6 +405,7 @@ footer a:hover {
         padding: 4em;
     }
 
+    /*Productes destacats*/
     .destacados{
         border-radius: 3em;
         width: 90%;
@@ -423,4 +439,5 @@ footer a:hover {
         border-radius: 4em;
     }
 
+    /*No hem necessitat parametres especifics per al footer*/
   }
