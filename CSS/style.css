@@ -1,208 +1,256 @@
-/*Parametres globals*/
-
-/*Parametres de body y html*/
-html, body{
+/* Html y body */
+html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
 }
 
-/*Header*/
-header{
+/* ------------------------------------------- */
+
+/* Header  */
+header {
     display: flex;
     justify-content: space-between;
-    background-color: #55917F;
+    margin: 1%;
+    padding: 1%;
+    background: linear-gradient(90deg, #000, #310000); /* Esta etiqueta hace un estilo de un color a otro */
     color: white;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.logo a:any-link{
-  text-decoration: none;
+.logo a:any-link {
+    text-decoration: none;
 }
 
-.logo h1{
+.logo h1 {
     margin: 0;
-    color: white;
+    color: #f5f5f5;
 }
 
-.logo span{
+.logo span {
     font-weight: normal;
-    color: lightgray;
+    color: #d6b5b5;
     font-size: 1rem;
 }
 
-.logo img{
+.logo img {
     height: 2.5rem;
 }
 
-.botones-header{
+.botones-header {
     display: flex;
     border-radius: 0.3rem;
 }
 
-.botones-header button{
-  cursor: pointer;
-  border: none;
-  background-color: white;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  color: black;
-  transition: all 0.5s ease;
+.botones-header button {
+    border: none;
+    background-color: #300000;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 0.6em 1.2em;
+    transition: all 0.5s ease; /* Este parametro son animaciones basicas*/
+    border-radius: 2em;
+    box-shadow: inset 0 0 10px #8B0000; /* Este parametro es buscado*/
 }
 
-.botones-header button:hover{
-  letter-spacing: 0.3em;
-  background-color: hsl(0, 89%, 71%);
-  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+.botones-header button a{
+    color: white;
+    text-decoration: none;
 }
 
+.botones-header button:hover, link:hover, visited:hover {
+    background-color: #8B0000;
+    color: white;
+    letter-spacing: 0.2em;
+}
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.icon img{
-    width: 1.5rem;
-    height: 1.5rem;
-    cursor: pointer;
+.icon img {
+    width: 1.7rem;
+    height: 1.7rem;
+    filter: brightness(0) invert(1); /*Esto es por que los iconos eran negros y ahora blancos*/
 }
 
-.cart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart .count{
-    display: flex;
-    background-color: cyan;
-    color: black;
+.cart .count {
+    background-color: #8B0000;
     border-radius: 50%;
     padding: 0.2rem 0.4rem;
-    font-size: 0.8rem;
-    font-weight: bold;
 }
 
-/*Banner*/
-.banner{    
+/* ------------------------------------------- */
+
+/* Banner */
+.banner {
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: #21295C;
     flex-direction: column;
-}
-
-.banner p{
+    background: url("../Img/fondo-estrellas.jpg");
+    background-size: cover;
+    background-position: center;
     color: white;
+    border-radius: 3em;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6); /* Buscada en internet */
+}
+
+.banner img {
+    width: 80%;
+    margin: 3em auto 1em auto;
+    border-radius: 2em;
+}
+
+.banner p {
+    color: #e8e0e0;
     font-weight: bold;
-    font-size: larger;
+    font-size: 1.2em;
+    width: 80%;
+    text-align: center;
+    align-self: center;
+    text-shadow: 0 0 10px #8B0000;
 }
 
-/*Productes destacats*/
-.destacados{
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
-  background-color: #21295c;
+/* ------------------------------------------- */
+
+/* Productos Destacados */
+.destacados {
+    display: flex;
+    margin: auto;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b0b0b;
+    border-radius: 2em;
+    box-shadow: inset 0 0 30px #8B0000;
 }
 
-.destacados-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #55917f;
+.destacados-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, #1a0000, #3a0000);
+    border: 1px solid #3A0000FF;
+    border-radius: 2em;
+    padding: 1em;
 }
 
-.destacados-panel{
-  display: flex;
-  flex-wrap: wrap;
+.destacados-header h2 {
+    font-size: 2.5em;
+    color: #ffcccc;
+    text-shadow: 0 0 15px #8B0000;
 }
 
-.producte{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 2em;
-  width: 20em;
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #F77272;
+.destacados-header p {
+    font-size: 1.2em;
+    color: #ffb3b3;
 }
 
-.producte:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.destacados-panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2%;
+    justify-content: center;
+    gap: 3em;
 }
 
-.producte img{
-  width: 80%;
-  margin: 1em 0;
-  height: 40%;
-  object-fit: contain;
+.producte {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2em;
+    width: 20em;
+    background: linear-gradient(145deg, #5a0000, #400101);
+    box-shadow: 0 0 15px rgba(255, 50, 50, 0.2);
 }
 
-.info{
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
+.producte:hover {
+    transform: translateY(-5px); /* Otro tipo de animacion */
+    box-shadow: 0 0 25px #ff0000;
 }
 
-.info h3{
-  font-size: 1.2em;
-  margin-bottom: 0.5em;
+.producte img {
+    width: 80%;
+    margin: 1em 0;
+    height: 40%;
+    object-fit: contain;
+    border-radius: 1em;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
 }
 
-.info p{
-  font-size: 0.95em;
-  margin-bottom: 0.5em;
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: #fbeeff;
 }
 
-.destacados-footer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.info h3 {
+    font-size: 1.3em;
 }
 
-.precio{
-  font-weight: bold;
-  font-size: 1.2em;
+.info p {
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
 }
 
-.destacados-footer button{
-  color: black;
-  background-color: #EFA9AE;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: bolder;
-  transition: 0.5s;
+.destacados-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.destacados-footer button:hover{
-  background-color: #EAFDF8;
+.precio {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ff6666;
 }
 
-/*Footer*/
+.destacados-footer button {
+    color: white;
+    background-color: #8B0000;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+    transition: 0.4s;
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.destacados-footer button:hover {
+    background-color: #ff1e1e;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+/* ------------------------------------------- */
+
+/* Footer */
 .footer {
     display: flex;
     width: 100%;
-    background-color: #21295c;
-    color: #EFA9AE;
-    border-top: 2px solid #55917f;
+    background: linear-gradient(90deg, #000, #2b0000);
+    color: #ffbcbc;
+    border-top: 2px solid #8B0000;
     padding: 1em 2em;
+    box-shadow: 0 -5px 20px rgba(139, 0, 0, 0.5);
 }
 
 .footer-left, .footer-center, .footer-right {
@@ -228,240 +276,24 @@ header{
 }
 
 footer a {
-    color: #EFA9AE;
+    color: #ecebeb;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #fff;
+    text-shadow: 0 0 10px #ff1e1e;
 }
 
 .redes {
     width: 1.7em;
     height: auto;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
 }
 
-/*Parametres per pantalles grans*/
-@media (min-width: 768px){
-
-  /*Header*/
-    header{
-        padding: 1rem 3%;
-        width: 100%;
-        position: fixed;
-    }
-
-    .logo h1{
-        font-size: 1.5rem;
-    }
-
-    .logo img{
-        height: 3rem;
-    }
-
-    .botones-header{
-        width: auto;
-        gap: 0.5em;
-    }
-
-    .botones-header button{
-        border-radius: 5rem;
-        letter-spacing: 0.05rem;
-    }
-
-    .icon{
-      margin-right: 5em;
-    }
-
-    .icon img{
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-    
-  /*Banner*/
-    .banner{
-        width: 90%;
-        margin: 7em auto 2em auto;
-        border-radius: 5em;
-    }
-
-    .banner img{
-        width: 80%;
-        height: auto;
-        margin: auto;
-        border-radius: 5em;
-        padding: 4em;
-    }
-
-    .banner p{
-        width: 80%;
-        align-self: center;
-        text-align: center;
-    }
-
-  /*Productes destacats*/
-    .destacados{
-        border-radius: 5em;
-        width: 90%;
-        margin-bottom: 2em;
-    }
-
-    .destacados-header{
-        margin: 1em 0;
-        margin-bottom: 2em;
-        border-radius: 5em;  
-        padding: 0 2em;
-    }
-
-    .destacados-header h2{
-        font-size: 3em;
-        margin-bottom: 0.5em;
-    }
-
-    .destacados-header p{
-        font-size: 1.5em;
-    }
-
-    .destacados-panel{
-        margin: 1em 0;
-        gap: 5em;
-    }
-
-    .destacados-footer button{
-        border-radius: 4em;
-    }
-
-  /*Footer*/
-    footer{
-    height: 2em;
-    width: 100%;
-    font-size: 0.9em;
-    }
-
-    footer p{
-        margin: 0;
-    }
+.redes:hover {
+    filter: drop-shadow(0 0 10px #ff1e1e);
 }
-
-  /*Paràmetres per pantalles petites*/
-  @media (max-width: 767px){
-
-    /*Header*/
-    header{
-        padding: 1rem 3%;
-        width: 100%;
-        flex-wrap: wrap; 
-        gap: 1rem; 
-    }
-
-    .logo{
-        flex: 1 1 auto; 
-        min-width: 2em; 
-    }
-
-    .logo h1{
-        font-size: 1.5rem;
-    }
-
-    .logo img{
-        height: 3rem;
-    }
-
-    .botones-header{
-        order: 3; 
-        width: 100%; 
-        gap: 0.5em;
-        margin: 0;
-        justify-content: center;
-    }
-
-    .botones-header button{
-        border-radius: 5rem;
-        letter-spacing: 0.05rem;
-        flex: 1;
-        padding: 0.5em 1em;
-    }
-
-    .botones-header button:hover{
-        letter-spacing: 0.1em;
-    }
-
-    .icon{
-        order: 2;
-        margin-left: auto;
-        margin-right: 2em;
-    }
-
-    .botones-header{
-        width: auto;
-        gap: 0.5em;
-        margin: 0 2em;
-    }
-
-    .botones-header button{
-        border-radius: 5rem;
-        letter-spacing: 0.05rem;
-    }
-
-    .botones-header button:hover{
-        letter-spacing: 0.1em;
-    }
-
-    /*Banner*/
-    .banner{
-        width: 90%;
-        margin: 2em auto;
-        border-radius: 3em;
-
-    }
-
-    .banner p{
-        width: 80%;
-        align-self: center;
-        text-align: center;
-    }
-
-    .banner img{
-        width: 90%;
-        height: auto;
-        margin: 2em auto;
-        border-radius: 3em;
-    }
-
-    /*Productes destacats*/
-    .destacados{
-        border-radius: 3em;
-        width: 90%;
-        margin-bottom: 2em;
-    }
-
-    .destacados-header{
-        margin: 0.8em 0;
-        width: 80%;
-        margin-bottom: 2em;
-        border-radius: 5em;  
-        padding: 0 1em;
-    }
-
-    .destacados-header h2{
-        font-size: 3em;
-        margin-bottom: 0.5em;
-    }
-
-    .destacados-header p{
-        font-size: 1.5em;
-    }
-
-    .destacados-panel{
-        justify-content: center;
-        margin: 1em 0;
-        gap: 5em;
-    }
-
-    .destacados-footer button{
-        border-radius: 4em;
-    }
-
-    /*No hem necessitat parametres especifics per al footer*/
-  }
