@@ -1,5 +1,7 @@
 body{
 background-image: url("../Img/fondo-estrellas.jpg");
+background-size: cover;
+background-position: center;
 }
 
 form {
