@@ -1,3 +1,6 @@
+/*Parametres globals*/
+
+/*Parametres de body y html*/
 html, body{
     margin: 0;
     padding: 0;
@@ -9,6 +12,7 @@ html, body{
     overflow-x: hidden;
 }
 
+/*Header*/
 header{
     display: flex;
     justify-content: space-between;
@@ -22,8 +26,13 @@ header{
     gap: 0.5rem;
 }
 
+.logo a:any-link{
+  text-decoration: none;
+}
+
 .logo h1{
     margin: 0;
+    color: white;
 }
 
 .logo span{
@@ -86,13 +95,22 @@ header{
     font-weight: bold;
 }
 
+/*Banner*/
 .banner{    
     display: flex;
     align-content: center;
     justify-content: center;
     background-color: #21295C;
+    flex-direction: column;
 }
 
+.banner p{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/*Productes destacats*/
 .destacados{
   display: flex;
   margin: auto;
@@ -177,6 +195,7 @@ header{
   background-color: #EAFDF8;
 }
 
+/*Footer*/
 .footer {
     display: flex;
     width: 100%;
@@ -223,11 +242,14 @@ footer a:hover {
     height: auto;
 }
 
-
+/*Parametres per pantalles grans*/
 @media (min-width: 768px){
+
+  /*Header*/
     header{
         padding: 1rem 3%;
         width: 100%;
+        position: fixed;
     }
 
     .logo h1{
@@ -257,9 +279,10 @@ footer a:hover {
         height: 1.8rem;
     }
     
+  /*Banner*/
     .banner{
         width: 90%;
-        margin: 2em auto;
+        margin: 7em auto 2em auto;
         border-radius: 5em;
     }
 
@@ -271,6 +294,13 @@ footer a:hover {
         padding: 4em;
     }
 
+    .banner p{
+        width: 80%;
+        align-self: center;
+        text-align: center;
+    }
+
+  /*Productes destacats*/
     .destacados{
         border-radius: 5em;
         width: 90%;
@@ -302,6 +332,7 @@ footer a:hover {
         border-radius: 4em;
     }
 
+  /*Footer*/
     footer{
     height: 2em;
     width: 100%;
@@ -313,8 +344,10 @@ footer a:hover {
     }
 }
 
+  /*Paràmetres per pantalles petites*/
   @media (max-width: 767px){
 
+    /*Header*/
     header{
         padding: 1rem 3%;
         width: 100%;
@@ -375,6 +408,7 @@ footer a:hover {
         letter-spacing: 0.1em;
     }
 
+    /*Banner*/
     .banner{
         width: 90%;
         margin: 2em auto;
@@ -382,14 +416,20 @@ footer a:hover {
 
     }
 
-    .banner img{
+    .banner p{
         width: 80%;
-        height: auto;
-        margin: auto;
-        border-radius: 5em;
-        padding: 4em;
+        align-self: center;
+        text-align: center;
     }
 
+    .banner img{
+        width: 90%;
+        height: auto;
+        margin: 2em auto;
+        border-radius: 3em;
+    }
+
+    /*Productes destacats*/
     .destacados{
         border-radius: 3em;
         width: 90%;
@@ -423,4 +463,5 @@ footer a:hover {
         border-radius: 4em;
     }
 
+    /*No hem necessitat parametres especifics per al footer*/
   }
