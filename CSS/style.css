@@ -20,6 +20,7 @@ header{
     justify-content: space-between;
     background: linear-gradient(90deg, #000, #310000);
     color: white;
+    z-index: 2;
 }
 
 .logo{
