@@ -23,6 +23,7 @@ h1 {
 label {
   font-weight: bold;
   color: #4338ca;
+  margin: 1em auto;
 }
 
 input {
@@ -49,6 +50,7 @@ form button {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 1em ;
 }
 
 button:hover {
